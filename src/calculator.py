@@ -18,3 +18,14 @@ class Calculator:
         if y == 0:
             raise ValueError("Cannot divide by zero")
         return x / y
+    
+    def square(self, x: float) -> float:
+        """Calculate the square of a number.
+        
+        Args:
+            x: The number to square
+            
+        Returns:
+            float: The square of the input number
+        """
+        return x * x

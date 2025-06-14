@@ -31,3 +31,9 @@ def test_divide(calculator):
 def test_divide_by_zero(calculator):
     with pytest.raises(ValueError):
         calculator.divide(5, 0)
+
+def test_square(calculator):
+    assert calculator.square(2) == 4
+    assert calculator.square(-3) == 9
+    assert calculator.square(0) == 0
+    assert calculator.square(2.5) == 6.25
