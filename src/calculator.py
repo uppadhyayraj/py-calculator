@@ -1,31 +1,24 @@
+from .operations import Addition, Subtraction, Multiplication, Division, Square
+
 class Calculator:
-    """A simple calculator class with basic arithmetic operations."""
+    """A simple calculator class that uses separate operation classes."""
     
     def add(self, x: float, y: float) -> float:
         """Add two numbers."""
-        return x + y
+        return Addition.execute(x, y)
     
     def subtract(self, x: float, y: float) -> float:
         """Subtract two numbers."""
-        return x - y
+        return Subtraction.execute(x, y)
     
     def multiply(self, x: float, y: float) -> float:
         """Multiply two numbers."""
-        return x * y
+        return Multiplication.execute(x, y)
     
     def divide(self, x: float, y: float) -> float:
         """Divide two numbers."""
-        if y == 0:
-            raise ValueError("Cannot divide by zero")
-        return x / y
+        return Division.execute(x, y)
     
     def square(self, x: float) -> float:
-        """Calculate the square of a number.
-        
-        Args:
-            x: The number to square
-            
-        Returns:
-            float: The square of the input number
-        """
-        return x * x
+        """Calculate the square of a number."""
+        return Square.execute(x)
