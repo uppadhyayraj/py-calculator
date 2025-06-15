@@ -1,4 +1,4 @@
-from .operations import Addition, Subtraction, Multiplication, Division, Square
+from .operations import Addition, Subtraction, Multiplication, Division, Square, SquareRoot
 
 class Calculator:
     """A simple calculator class that uses separate operation classes."""
@@ -22,3 +22,7 @@ class Calculator:
     def square(self, x: float) -> float:
         """Calculate the square of a number."""
         return Square.execute(x)
+        
+    def sqrt(self, x: float) -> float:
+        """Calculate the square root of a number."""
+        return SquareRoot.execute(x)
